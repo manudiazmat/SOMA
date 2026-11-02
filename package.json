@@ -1,0 +1,21 @@
+{
+  "name": "soma",
+  "private": true,
+  "version": "0.1.0",
+  "description": "SOMA — entender lo que sientes, no dejar de sentirlo.",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:db": "npm run test --workspace @soma/db-tests",
+    "dev:gateway": "npm run dev --workspace @soma/gateway",
+    "dev:mobile": "npm run start --workspace @soma/mobile"
+  }
+}
